@@ -7,11 +7,19 @@ import java.util.List;
 
 public class ClazzUtil {
 
-    private final static List<String> javaPrefixes = List.of("com.sun.", "java", "javax", "jdk", "org.w3c", "org.xml");
+    private final static List<String> JAVA_PREFIXES = List.of("com.sun.", "java", "javax", "jdk", "org.w3c", "org.xml");
 
 
     public static ClazzType calculateClazzType(Class<?> clazz) {
-        return clazz.isInterface() ? ClazzType.INTERFACE : (clazz.isEnum() ? ClazzType.ENUM : ClazzType.CLASS);
+        if (clazz.isInterface()) {
+            return ClazzType.INTERFACE;
+        }
+
+        if (clazz.isEnum()) {
+            return ClazzType.ENUM;
+        }
+
+        return ClazzType.CLASS;
     }
 
     public static ClassProperties retrieveClazzInfo(Class<?> clazz) {
@@ -25,7 +33,7 @@ public class ClazzUtil {
 
     private static boolean isJavaClass(Class<?> clazz) {
         final String packageName = clazz.getPackageName();
-        return javaPrefixes.stream().anyMatch(packageName::startsWith);
+        return JAVA_PREFIXES.stream().anyMatch(packageName::startsWith);
     }
 
 }
