@@ -1,4 +1,4 @@
-package com.andreidodu.reflections.lesson1.dto;
+package com.andreidodu.reflections.lesson1ClassInfo.dto;
 
 
 public class ClassProperties {

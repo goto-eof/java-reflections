@@ -1,4 +1,4 @@
-package com.andreidodu.reflections.lesson2.util;
+package com.andreidodu.reflections.lesson2ClassInterfacesHierarchy.util;
 
 import java.util.Arrays;
 import java.util.Set;

@@ -1,7 +1,7 @@
-package com.andreidodu.reflections.lesson1.util;
+package com.andreidodu.reflections.lesson1ClassInfo.util;
 
-import com.andreidodu.reflections.lesson1.dto.ClassProperties;
-import com.andreidodu.reflections.lesson1.dto.ClazzType;
+import com.andreidodu.reflections.lesson1ClassInfo.dto.ClassProperties;
+import com.andreidodu.reflections.lesson1ClassInfo.dto.ClazzType;
 
 import java.util.List;
 
